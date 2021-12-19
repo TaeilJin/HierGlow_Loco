@@ -4,7 +4,7 @@ import torch
 from collections import defaultdict
 from . import learning_rate_schedule
 from .config import JsonConfig
-from .models_hierarchy_sp_ee import Glow
+from .models_hierarchy_sp import Glow
 from .utils import load, save, get_proper_device
 
 

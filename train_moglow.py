@@ -11,8 +11,8 @@ import datetime
 from docopt import docopt
 from torch.utils.data import DataLoader, Dataset
 from glow.builder import build
-from glow.trainer_ee import Trainer
-from glow.generator_ee import Generator
+from glow.trainer import Trainer
+from glow.generator import Generator
 from glow.config import JsonConfig
 from torch.utils.data import DataLoader
 import torch
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # hparams = args["<hparams>"]
     # dataset = args["<dataset>"]
     hparams = "hparams/preferred/locomotion.json" # 
-    dataset = "locomotion_ee"
+    dataset = "locomotion_separate"
     assert dataset in motion.Datasets, (
         "`{}` is not supported, use `{}`".format(dataset, motion.Datasets.keys()))
     assert os.path.exists(hparams), (
